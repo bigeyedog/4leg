@@ -2473,9 +2473,9 @@
 }
 
 @media only screen and (max-width: 500px) {
-  #body {
+  /* #body {
     background-color: lightgreen;
-  }
+  } */
 
   #tableDiv {
     width: 95%;
