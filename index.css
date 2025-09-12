@@ -1,0 +1,151 @@
+#body {
+  background-color: brown;
+}
+
+#titleDiv {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: beige;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+#introDiv {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: white;
+  font-size: 24px;
+  text-align: justify;
+}
+
+#startbuttonDiv {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.button {
+  background-color: beige;
+  color: black;
+  font-size: 22px;
+  width: 120px;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+#copyrightDiv {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #titleDiv {
+    font-size: 34px;
+  }
+
+  #introDiv {
+    font-size: 22px;
+  }
+
+  .button {
+    font-size: 20px;
+    width: 110px;
+  }
+
+  #copyrightDiv {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #titleDiv {
+    font-size: 32px;
+  }
+
+  #introDiv {
+    font-size: 20px;
+  }
+
+  .button {
+    font-size: 18px;
+    width: 100px;
+  }
+
+  #copyrightDiv {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #titleDiv {
+    font-size: 30px;
+  }
+
+  #introDiv {
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 16px;
+    width: 90px;
+  }
+
+  #copyrightDiv {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #titleDiv {
+    font-size: 28px;
+  }
+
+  #introDiv {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 80px;
+  }
+
+  #copyrightDiv {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #titleDiv {
+    font-size: 26px;
+  }
+
+  #introDiv {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 12px;
+    width: 70px;
+  }
+
+  #copyrightDiv {
+    font-size: 8px;
+  }
+}

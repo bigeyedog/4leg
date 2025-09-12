@@ -1,0 +1,3246 @@
+#body {
+  background-color: antiquewhite;
+}
+
+#tableDiv {
+  margin: auto;
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#table {
+  width: 100%;
+  table-layout: fixed; /* Forces equal column width */
+  border-collapse: collapse; /* Optional: removes gaps between cells */
+}
+
+.th {
+  background-color: transparent;
+  border-color: black;
+  border-width: 1.5px;
+  border-style: solid;
+  color: black;
+  font-weight: 500;
+  padding-left: 3px;
+}
+
+.td2 {
+  background-color: transparent;
+  padding-left: 3px;
+  color: black;
+}
+
+.td1 {
+  color: black;
+  background-color: transparent;
+  border-color: black;
+  border-width: 1.5px;
+  border-style: solid;
+  padding-left: 3px;
+}
+
+.th,
+.td1,
+.td2 {
+  font-size: 16px;
+}
+
+#sumlabel,
+#td9,
+#td10,
+#td11,
+#td12 {
+  color: black;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+#eastBalance,
+#southBalance,
+#westBalance,
+#northBalance,
+#p1Balance,
+#p2Balance,
+#p3Balance {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+#forRemark,
+#stat,
+#forColumn2,
+#forColumn3,
+#forColumn4 {
+  background-color: brown;
+  color: white;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 2px 2px 2px 2px;
+}
+
+#remark {
+  width: 80%;
+  background-color: rgb(24, 30, 30);
+  color: yellow;
+  text-align: left;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#tbody4 {
+  color: white;
+}
+
+#se,
+#mw,
+#ng,
+#lastRow {
+  margin-bottom: 5px;
+}
+
+.seinput {
+  width: 80px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 2px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#seInstruction {
+  color: white;
+  font-size: 16px;
+}
+
+.selabel {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  margin-right: 1px;
+  text-align: left;
+}
+
+.select {
+  width: 120px;
+  background-color: antiquewhite;
+  margin-bottom: 10px;
+  padding: 3px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.sidebutton {
+  border-radius: 5px;
+  background-color: antiquewhite;
+  color: black;
+  font-size: 18px;
+  width: 70px;
+}
+
+.belowbutton {
+  border-radius: 5px;
+  background-color: antiquewhite;
+  color: black;
+  font-size: 18px;
+  width: 70px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  margin-right: 1px;
+  text-align: left;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: antiquewhite;
+  color: black;
+  font-size: 18px;
+  width: 150px;
+}
+
+#bottomDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#resultDiv {
+  background-color: rgb(24, 30, 30);
+  width: 80%;
+  /* display: block; */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+#flexRow {
+  display: flex;
+}
+
+#resultentry {
+  background-color: rgb(24, 30, 30);
+  margin: auto;
+  width: 75%;
+  margin-right: 10px;
+}
+
+#mahjongtable {
+  background-color: rgb(24, 30, 30);
+  width: 25%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+#aroundtable {
+  background-color: brown;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: none;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+#row1,
+#row2,
+#row3 {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: flex;
+  gap: 0px;
+}
+
+#block1,
+#block3,
+#block7,
+#block9 {
+  width: 20%;
+  aspect-ratio: 1/1;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+#block2 {
+  color: beige;
+  font-size: 20px;
+  font-weight: 500;
+  width: 60%;
+  aspect-ratio: 3/1;
+  margin: 0px;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#block8 {
+  color: beige;
+  font-size: 20px;
+  font-weight: 500;
+  width: 60%;
+  aspect-ratio: 3/1;
+  margin: 0px;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding-top: 5px;
+}
+
+#block4 {
+  width: 20%;
+  aspect-ratio: 1/3;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+  transform-origin: center;
+  color: beige;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  /* margin-right: -12px; */
+}
+
+/* #block4p {
+  transform: rotate(90deg);
+  transform-origin: center;
+  margin: auto;
+  margin-right: 0px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-right: -10px;
+} */
+
+#block6 {
+  width: 20%;
+  aspect-ratio: 1/3;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  color: beige;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  /* margin-left: -12px; */
+}
+
+/* #block6p {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  margin: auto;
+  margin-left: 0px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-left: -10px;
+} */
+
+#block5 {
+  width: 60%;
+  aspect-ratio: 1/1;
+  margin: 0px;
+  padding: 0px;
+  background-color: blue;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+#block5row1,
+#block5row2,
+#block5row3 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+#block511,
+#block513,
+#block531,
+#block533 {
+  width: 25%;
+  aspect-ratio: 1/1;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+#block512,
+#block532 {
+  width: 50%;
+  aspect-ratio: 2/1;
+  font-size: 20px;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#block521,
+#block523 {
+  width: 25%;
+  aspect-ratio: 1/2;
+  font-size: 20px;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#block522 {
+  width: 50%;
+  aspect-ratio: 1/1;
+  font-size: 44px;
+  color: yellow;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lastRow,
+#ng3 {
+  margin-top: 10px;
+}
+
+#replacement,
+#forColumn2,
+#forColumn3,
+#forColumn4 {
+  display: none;
+}
+
+#copyrightDiv {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: black;
+  font-size: 14px;
+}
+
+/* #endof4,
+#askforshuffle,
+#pleasechoose {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0px;
+} */
+
+@media only screen and (max-width: 1400px) {
+  /* #body {
+    background-color: lightblue;
+  } */
+
+  #tableDiv {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  #table {
+    width: 100%;
+  }
+
+  .th {
+    border-width: 1.5px;
+    font-weight: 500;
+    padding-left: 3px;
+  }
+
+  .td2 {
+    padding-left: 3px;
+  }
+
+  .td1 {
+    border-width: 1.5px;
+    padding-left: 3px;
+  }
+
+  .th,
+  .td1,
+  .td2 {
+    font-size: 16px;
+  }
+
+  #sumlabel,
+  #td9,
+  #td10,
+  #td11,
+  #td12 {
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  #eastBalance,
+  #southBalance,
+  #westBalance,
+  #northBalance,
+  #p1Balance,
+  #p2Balance,
+  #p3Balance {
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  #forRemark,
+  #stat {
+    border-radius: 3px;
+    font-size: 16px;
+  }
+
+  #remark {
+    width: 80%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  #se,
+  #mw,
+  #ng,
+  #lastRow {
+    margin-bottom: 5px;
+  }
+
+  .seinput {
+    width: 80px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 2px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  #seInstruction {
+    font-size: 16px;
+  }
+
+  .selabel {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .select {
+    width: 120px;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+  .sidebutton {
+    border-radius: 5px;
+    font-size: 18px;
+    width: 70px;
+  }
+
+  .belowbutton {
+    border-radius: 5px;
+    font-size: 18px;
+    width: 70px;
+  }
+
+  .label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .button {
+    border-radius: 5px;
+    font-size: 18px;
+    width: 150px;
+  }
+
+  #bottomDiv {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #resultDiv {
+    background-color: rgb(24, 30, 30);
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
+  #resultentry {
+    background-color: rgb(24, 30, 30);
+    width: 75%;
+    margin-right: 10px;
+  }
+
+  #mahjongtable {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #aroundtable {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block1,
+  #block3,
+  #block7,
+  #block9 {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block2 {
+    font-size: 20px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-bottom: 5px;
+  }
+
+  #block8 {
+    font-size: 20px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-top: 5px;
+  }
+
+  #block4 {
+    font-size: 20px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block4p {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-right: 0px;
+    font-size: 20px;
+  }
+
+  #block6 {
+    font-size: 20px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block6p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-left: 0px;
+    font-size: 20px;
+  }
+
+  #block5 {
+    width: 60%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: white;
+  }
+
+  #block5row1,
+  #block5row2,
+  #block5row3 {
+    gap: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block511,
+  #block513,
+  #block531,
+  #block533 {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block512,
+  #block532 {
+    width: 50%;
+    aspect-ratio: 2/1;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block521,
+  #block523 {
+    width: 25%;
+    aspect-ratio: 1/2;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block522 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: 44px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #lastRow,
+  #ng3 {
+    margin-top: 10px;
+  }
+
+  #replacement,
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    display: none;
+  }
+
+  /* #endof4,
+#askforshuffle,
+#pleasechoose {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0px;
+} */
+}
+@media only screen and (max-width: 1200px) {
+  /* #body {
+    background-color: lightgoldenrodyellow;
+  } */
+
+  #tableDiv {
+    width: 85%;
+    margin-top: 20px;
+  }
+
+  #table {
+    width: 100%;
+  }
+
+  .th {
+    border-width: 1.5px;
+    font-weight: 500;
+    padding-left: 3px;
+  }
+
+  .td2 {
+    padding-left: 3px;
+  }
+
+  .td1 {
+    border-width: 1.5px;
+    padding-left: 3px;
+  }
+
+  .th,
+  .td1,
+  .td2 {
+    font-size: 15px;
+  }
+
+  #sumlabel,
+  #td9,
+  #td10,
+  #td11,
+  #td12 {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  #eastBalance,
+  #southBalance,
+  #westBalance,
+  #northBalance,
+  #p1Balance,
+  #p2Balance,
+  #p3Balance {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  #forRemark,
+  #stat {
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
+  #remark {
+    width: 85%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  #se,
+  #mw,
+  #ng,
+  #lastRow {
+    margin-bottom: 5px;
+  }
+
+  .seinput {
+    width: 70px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 2px;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  #seInstruction {
+    font-size: 14px;
+  }
+
+  .selabel {
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .select {
+    width: 110px;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+
+  .sidebutton {
+    border-radius: 5px;
+    font-size: 17px;
+    width: 65px;
+  }
+
+  .belowbutton {
+    border-radius: 5px;
+    font-size: 17px;
+    width: 65px;
+  }
+
+  .label {
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .button {
+    border-radius: 5px;
+    font-size: 17px;
+    width: 125px;
+  }
+
+  #bottomDiv {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #resultDiv {
+    background-color: rgb(24, 30, 30);
+    width: 85%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
+  #resultentry {
+    background-color: rgb(24, 30, 30);
+    width: 75%;
+    margin-right: 10px;
+  }
+
+  #mahjongtable {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #aroundtable {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block1,
+  #block3,
+  #block7,
+  #block9 {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block2 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-bottom: 3px;
+  }
+
+  #block8 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-top: 3px;
+  }
+
+  #block4 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block4p {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-right: 0px;
+    font-size: 18px;
+  }
+
+  #block6 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block6p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-left: 0px;
+    font-size: 18px;
+  }
+
+  #block5 {
+    width: 60%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: white;
+  }
+
+  #block5row1,
+  #block5row2,
+  #block5row3 {
+    gap: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block511,
+  #block513,
+  #block531,
+  #block533 {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block512,
+  #block532 {
+    width: 50%;
+    aspect-ratio: 2/1;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block521,
+  #block523 {
+    width: 25%;
+    aspect-ratio: 1/2;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block522 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #lastRow,
+  #ng3 {
+    margin-top: 10px;
+  }
+
+  #replacement,
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    display: none;
+  }
+
+  /* #endof4,
+#askforshuffle,
+#pleasechoose {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0px;
+} */
+}
+
+@media only screen and (max-width: 1000px) {
+  /* #body {
+    background-color: lightpink;
+  } */
+
+  #tableDiv {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  #table {
+    width: 100%;
+  }
+
+  .th {
+    border-width: 1.5px;
+    font-weight: 500;
+    padding-left: 3px;
+  }
+
+  .td2 {
+    padding-left: 3px;
+  }
+
+  .td1 {
+    border-width: 1.5px;
+    padding-left: 3px;
+  }
+
+  .th,
+  .td1,
+  .td2 {
+    font-size: 13px;
+  }
+
+  #sumlabel,
+  #td9,
+  #td10,
+  #td11,
+  #td12 {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  #eastBalance,
+  #southBalance,
+  #westBalance,
+  #northBalance,
+  #p1Balance,
+  #p2Balance,
+  #p3Balance {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  #forRemark,
+  #stat {
+    border-radius: 3px;
+    font-size: 11.5px;
+  }
+
+  #remark {
+    width: 90%;
+    padding: 8px 8px 8px 8px;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+
+  #se,
+  #mw,
+  #ng,
+  #lastRow {
+    margin-bottom: 5px;
+  }
+
+  .seinput {
+    width: 65px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 2px;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  #seInstruction {
+    font-size: 12px;
+  }
+
+  .selabel {
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .select {
+    width: 95px;
+    margin-bottom: 8px;
+    padding: 3px;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+
+  .sidebutton {
+    border-radius: 5px;
+    font-size: 15px;
+    width: 55px;
+  }
+
+  .belowbutton {
+    border-radius: 5px;
+    font-size: 15px;
+    width: 55px;
+  }
+
+  .label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .button {
+    border-radius: 5px;
+    font-size: 15px;
+    width: 110px;
+  }
+
+  #bottomDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #resultDiv {
+    background-color: rgb(24, 30, 30);
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
+  #resultentry {
+    background-color: rgb(24, 30, 30);
+    width: 75%;
+    margin-right: 10px;
+  }
+
+  #mahjongtable {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #aroundtable {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block1,
+  #block3,
+  #block7,
+  #block9 {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block2 {
+    font-size: 16px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-bottom: 5px;
+  }
+
+  #block8 {
+    font-size: 16px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-top: 5px;
+  }
+
+  #block4 {
+    font-size: 16px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block4p {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-right: 0px;
+    font-size: 16px;
+  }
+
+  #block6 {
+    font-size: 16px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block6p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-left: 0px;
+    font-size: 16px;
+  }
+
+  #block5 {
+    width: 60%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: white;
+  }
+
+  #block5row1,
+  #block5row2,
+  #block5row3 {
+    gap: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block511,
+  #block513,
+  #block531,
+  #block533 {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block512,
+  #block532 {
+    width: 50%;
+    aspect-ratio: 2/1;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block521,
+  #block523 {
+    width: 25%;
+    aspect-ratio: 1/2;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block522 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: 36px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #lastRow,
+  #ng3 {
+    margin-top: 10px;
+  }
+
+  #replacement,
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    display: none;
+  }
+
+  /* #endof4,
+#askforshuffle,
+#pleasechoose {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0px;
+} */
+}
+
+@media only screen and (max-width: 800px) {
+  /* #body {
+    background-color: lightcyan;
+  } */
+
+  #tableDiv {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  #table {
+    width: 100%;
+  }
+
+  .th {
+    border-width: 1.5px;
+    font-weight: 500;
+    padding-left: 3px;
+  }
+
+  .td2 {
+    padding-left: 3px;
+  }
+
+  .td1 {
+    border-width: 1.5px;
+    padding-left: 3px;
+  }
+
+  .th,
+  .td1,
+  .td2 {
+    font-size: 11px;
+  }
+
+  #sumlabel,
+  #td9,
+  #td10,
+  #td11,
+  #td12 {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  #eastBalance,
+  #southBalance,
+  #westBalance,
+  #northBalance,
+  #p1Balance,
+  #p2Balance,
+  #p3Balance {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  #forRemark,
+  #stat {
+    border-radius: 3px;
+    font-size: 10px;
+  }
+
+  #remark {
+    width: 90%;
+    padding: 6px 6px 6px 6px;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 10.5px;
+  }
+
+  #se,
+  #mw,
+  #ng,
+  #lastRow {
+    margin-bottom: 5px;
+  }
+
+  .seinput {
+    width: 60px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 2px;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  #seInstruction {
+    font-size: 10.5px;
+  }
+
+  .selabel {
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .select {
+    width: 90px;
+    margin-bottom: 8px;
+    padding: 3px;
+    font-size: 13px;
+    border-radius: 5px;
+  }
+
+  .sidebutton {
+    border-radius: 5px;
+    font-size: 13px;
+    width: 55px;
+  }
+
+  .belowbutton {
+    border-radius: 5px;
+    font-size: 13px;
+    width: 55px;
+  }
+
+  .label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .button {
+    border-radius: 5px;
+    font-size: 13px;
+    width: 100px;
+  }
+
+  #bottomDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #resultDiv {
+    background-color: rgb(24, 30, 30);
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
+  #resultentry {
+    background-color: rgb(24, 30, 30);
+    width: 75%;
+    margin-right: 10px;
+  }
+
+  #mahjongtable {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #aroundtable {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block1,
+  #block3,
+  #block7,
+  #block9 {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block2 {
+    font-size: 14px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-bottom: 5px;
+  }
+
+  #block8 {
+    font-size: 14px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-top: 5px;
+  }
+
+  #block4 {
+    font-size: 14px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block4p {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-right: 0px;
+    font-size: 14px;
+  }
+
+  #block6 {
+    font-size: 14px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block6p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-left: 0px;
+    font-size: 14px;
+  }
+
+  #block5 {
+    width: 60%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: white;
+  }
+
+  #block5row1,
+  #block5row2,
+  #block5row3 {
+    gap: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block511,
+  #block513,
+  #block531,
+  #block533 {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block512,
+  #block532 {
+    width: 50%;
+    aspect-ratio: 2/1;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block521,
+  #block523 {
+    width: 25%;
+    aspect-ratio: 1/2;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block522 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: 28px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #lastRow,
+  #ng3 {
+    margin-top: 5px;
+  }
+
+  #replacement,
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    display: none;
+  }
+
+  #copyrightDiv {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+  }
+  /* #endof4,
+#askforshuffle,
+#pleasechoose {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0px;
+} */
+}
+
+@media only screen and (max-width: 700px) {
+  /* #body {
+    background-color: lightcyan;
+  } */
+
+  #tableDiv {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  #table {
+    width: 100%;
+  }
+
+  .th {
+    border-width: 1.5px;
+    font-weight: 500;
+    padding-left: 3px;
+  }
+
+  .td2 {
+    padding-left: 3px;
+  }
+
+  .td1 {
+    border-width: 1.5px;
+    padding-left: 3px;
+  }
+
+  .th,
+  .td1,
+  .td2 {
+    font-size: 9px;
+  }
+
+  #sumlabel,
+  #td9,
+  #td10,
+  #td11,
+  #td12 {
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  #eastBalance,
+  #southBalance,
+  #westBalance,
+  #northBalance,
+  #p1Balance,
+  #p2Balance,
+  #p3Balance {
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  #forRemark,
+  #stat {
+    border-radius: 3px;
+    font-size: 8px;
+  }
+
+  #remark {
+    width: 90%;
+    padding: 6px 6px 6px 6px;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 9px;
+  }
+
+  #se,
+  #mw,
+  #ng,
+  #lastRow {
+    margin-bottom: 5px;
+  }
+
+  .seinput {
+    width: 55px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 2px;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  #seInstruction {
+    font-size: 10px;
+  }
+
+  .selabel {
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .select {
+    width: 80px;
+    margin-bottom: 8px;
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+
+  .sidebutton {
+    border-radius: 5px;
+    font-size: 12px;
+    width: 50px;
+  }
+
+  .belowbutton {
+    border-radius: 5px;
+    font-size: 12px;
+    width: 50px;
+  }
+
+  .label {
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 1px;
+  }
+
+  .button {
+    border-radius: 5px;
+    font-size: 12px;
+    width: 90px;
+  }
+
+  #bottomDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #resultDiv {
+    background-color: rgb(24, 30, 30);
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
+  #resultentry {
+    background-color: rgb(24, 30, 30);
+    width: 75%;
+    margin-right: 10px;
+  }
+
+  #mahjongtable {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #aroundtable {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block1,
+  #block3,
+  #block7,
+  #block9 {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block2 {
+    font-size: 13px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-bottom: 5px;
+  }
+
+  #block8 {
+    font-size: 13px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-top: 5px;
+  }
+
+  #block4 {
+    font-size: 13px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block4p {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-right: 0px;
+    font-size: 13px;
+  }
+
+  #block6 {
+    font-size: 13px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block6p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-left: 0px;
+    font-size: 13px;
+  }
+
+  #block5 {
+    width: 60%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: white;
+  }
+
+  #block5row1,
+  #block5row2,
+  #block5row3 {
+    gap: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block511,
+  #block513,
+  #block531,
+  #block533 {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block512,
+  #block532 {
+    width: 50%;
+    aspect-ratio: 2/1;
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block521,
+  #block523 {
+    width: 25%;
+    aspect-ratio: 1/2;
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block522 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: 22px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #lastRow,
+  #ng3 {
+    margin-top: 5px;
+  }
+
+  #replacement,
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    display: none;
+  }
+
+  /* #endof4,
+#askforshuffle,
+#pleasechoose {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0px;
+} */
+}
+
+@media only screen and (max-width: 600px) {
+  /* #body {
+    background-color: lightcoral;
+  } */
+
+  #tableDiv {
+    width: 95%;
+    margin-top: 10px;
+  }
+
+  #table {
+    width: 100%;
+  }
+
+  .th {
+    border-width: 1px;
+    font-weight: 500;
+    padding-left: 2px;
+  }
+
+  .td2 {
+    padding-left: 2px;
+  }
+
+  .td1 {
+    border-width: 1px;
+    padding-left: 2px;
+  }
+
+  .th,
+  .td1,
+  .td2 {
+    font-size: 11px;
+  }
+
+  #sumlabel,
+  #td9,
+  #td10,
+  #td11,
+  #td12 {
+    font-weight: 500;
+    font-size: 11.5px;
+  }
+
+  #eastBalance,
+  #southBalance,
+  #westBalance,
+  #northBalance,
+  #p1Balance,
+  #p2Balance,
+  #p3Balance {
+    font-weight: 500;
+    font-size: 11.5px;
+  }
+
+  #forRemark,
+  #stat,
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    border-radius: 3px;
+    font-size: 10px;
+  }
+
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    display: block;
+  }
+
+  #remark {
+    width: 95%;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    margin-top: 6px;
+    font-size: 8px;
+  }
+
+  #se,
+  #mw,
+  #ng,
+  #lastRow {
+    margin-bottom: 5px;
+  }
+
+  #seInstruction {
+    font-size: 10px;
+  }
+
+  .seinput {
+    width: 65px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 4px;
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .selabel {
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 2px;
+  }
+
+  .select {
+    width: 80px;
+    margin-bottom: 6px;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+
+  .sidebutton {
+    border-radius: 5px;
+    font-size: 12px;
+    width: 60px;
+  }
+
+  .belowbutton {
+    border-radius: 5px;
+    font-size: 12px;
+    width: 60px;
+  }
+
+  .label {
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 2px;
+  }
+
+  .button {
+    border-radius: 5px;
+    font-size: 11px;
+    width: 85px;
+  }
+
+  #bottomDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* #resultentry {
+  background-color: rgb(24, 30, 30);
+  margin: auto;
+  width: 70%;
+  margin-right: 10px;
+} */
+
+  #resultDiv {
+    background-color: rgb(24, 30, 30);
+    width: 95%;
+    /* display: block; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+  }
+
+  #flexRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  #resultentry {
+    background-color: rgb(24, 30, 30);
+    width: 100%;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  #mahjongtable {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    margin-bottom: 0px;
+  }
+
+  #aroundtable {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block1,
+  #block3,
+  #block7,
+  #block9 {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block2 {
+    font-size: 12px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-bottom: 2px;
+  }
+
+  #block8 {
+    font-size: 12px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-top: 2px;
+  }
+
+  #block4 {
+    font-size: 12px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block4p {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-right: 0px;
+    font-size: 12px;
+  }
+
+  #block6 {
+    font-size: 12px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block6p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-left: 0px;
+    font-size: 12px;
+  }
+
+  #block5 {
+    width: 60%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+  }
+
+  #block5row1,
+  #block5row2,
+  #block5row3 {
+    gap: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block511,
+  #block513,
+  #block531,
+  #block533 {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block512,
+  #block532 {
+    width: 50%;
+    aspect-ratio: 2/1;
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block521,
+  #block523 {
+    width: 25%;
+    aspect-ratio: 1/2;
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block522 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #lastRow {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  #ng3,
+  #mahjongtable {
+    margin-top: 0px;
+  }
+
+  #seInstruction {
+    margin-bottom: 0px;
+  }
+
+  .col2,
+  .col3,
+  .col4 {
+    display: none;
+  }
+
+  #replacement {
+    display: block;
+    font-size: 12px;
+  }
+
+  #replacementSerial,
+  #replacementRoundNumber,
+  #replacementRound,
+  #replacementZhuang {
+    margin-right: 15px;
+    color: white;
+    font-size: 12px;
+  }
+
+  #copyrightDiv {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: black;
+    font-size: 10px;
+  }
+
+  /* #endof4,
+#askforshuffle,
+#pleasechoose {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0px;
+} */
+}
+
+@media only screen and (max-width: 500px) {
+  #body {
+    background-color: lightgreen;
+  }
+
+  #tableDiv {
+    width: 95%;
+    margin-top: 10px;
+  }
+
+  #table {
+    width: 100%;
+  }
+
+  .th {
+    border-width: 1px;
+    font-weight: 500;
+    padding-left: 2px;
+  }
+
+  .td2 {
+    padding-left: 2px;
+  }
+
+  .td1 {
+    border-width: 1px;
+    padding-left: 2px;
+  }
+
+  .th,
+  .td1,
+  .td2 {
+    font-size: 8.5px;
+  }
+
+  #sumlabel,
+  #td9,
+  #td10,
+  #td11,
+  #td12 {
+    font-weight: 500;
+    font-size: 9px;
+  }
+
+  #eastBalance,
+  #southBalance,
+  #westBalance,
+  #northBalance,
+  #p1Balance,
+  #p2Balance,
+  #p3Balance {
+    font-weight: 500;
+    font-size: 9px;
+  }
+
+  #forRemark,
+  #stat,
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    border-radius: 3px;
+    font-size: 7.5px;
+  }
+
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    display: block;
+  }
+
+  #remark {
+    width: 95%;
+    padding: 3px 3px 3px 3px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 7px;
+  }
+
+  #se,
+  #mw,
+  #mw1,
+  #mw2,
+  #mw3,
+  #mw4,
+  #mw5,
+  #ng,
+  #ng1,
+  #ng2,
+  #ng3,
+  #lastRow {
+    margin-bottom: 3px;
+  }
+
+  #seInstruction {
+    font-size: 10px;
+  }
+
+  .seinput {
+    width: 55px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 3px;
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+
+  .selabel {
+    font-size: 10px;
+    font-weight: 500;
+    margin-right: 1.5px;
+  }
+
+  .select {
+    width: 70px;
+    margin-bottom: 3px;
+    padding: 2px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
+
+  .sidebutton {
+    border-radius: 5px;
+    font-size: 10px;
+    width: 50px;
+  }
+
+  .belowbutton {
+    border-radius: 5px;
+    font-size: 10px;
+    width: 50px;
+  }
+
+  .label {
+    font-size: 10px;
+    font-weight: 500;
+    margin-right: 1.5px;
+  }
+
+  .button {
+    border-radius: 5px;
+    font-size: 9px;
+    width: 70px;
+  }
+
+  #bottomDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  /* #resultentry {
+  background-color: rgb(24, 30, 30);
+  margin: auto;
+  width: 70%;
+  margin-right: 10px;
+} */
+
+  #resultDiv {
+    background-color: rgb(24, 30, 30);
+    width: 95%;
+    /* display: block; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+  }
+
+  #flexRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  #resultentry {
+    background-color: rgb(24, 30, 30);
+    width: 100%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  #mahjongtable {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    margin-bottom: 0px;
+  }
+
+  #aroundtable {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block1,
+  #block3,
+  #block7,
+  #block9 {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block2 {
+    font-size: 10px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-bottom: 2px;
+  }
+
+  #block8 {
+    font-size: 10px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-top: 2px;
+  }
+
+  #block4 {
+    font-size: 10px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block4p {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-right: 0px;
+    font-size: 10px;
+  }
+
+  #block6 {
+    font-size: 10px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block6p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-left: 0px;
+    font-size: 10px;
+  }
+
+  #block5 {
+    width: 60%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+  }
+
+  #block5row1,
+  #block5row2,
+  #block5row3 {
+    gap: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block511,
+  #block513,
+  #block531,
+  #block533 {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block512,
+  #block532 {
+    width: 50%;
+    aspect-ratio: 2/1;
+    font-size: 8px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block521,
+  #block523 {
+    width: 25%;
+    aspect-ratio: 1/2;
+    font-size: 8px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block522 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #lastRow {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  #ng3,
+  #mahjongtable {
+    margin-top: 0px;
+  }
+
+  #seInstruction {
+    margin-bottom: 0px;
+  }
+
+  .col2,
+  .col3,
+  .col4 {
+    display: none;
+  }
+
+  #replacement {
+    display: block;
+    font-size: 10px;
+  }
+
+  #replacementSerial,
+  #replacementRoundNumber,
+  #replacementRound,
+  #replacementZhuang {
+    margin-right: 15px;
+    color: white;
+    font-size: 10px;
+  }
+
+  /* #endof4,
+  #askforshuffle,
+  #pleasechoose {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0px;
+  } */
+}
+
+@media only screen and (max-width: 400px) {
+  /* #body {
+    background-color: lightslategray;
+  } */
+
+  #tableDiv {
+    width: 95%;
+    margin-top: 10px;
+  }
+
+  #table {
+    width: 100%;
+  }
+
+  .th {
+    border-width: 1px;
+    font-weight: 500;
+    padding-left: 2px;
+  }
+
+  .td2 {
+    padding-left: 2px;
+  }
+
+  .td1 {
+    border-width: 1px;
+    padding-left: 2px;
+  }
+
+  .th,
+  .td1,
+  .td2 {
+    font-size: 7.5px;
+  }
+
+  #sumlabel,
+  #td9,
+  #td10,
+  #td11,
+  #td12 {
+    font-weight: 500;
+    font-size: 8px;
+  }
+
+  #eastBalance,
+  #southBalance,
+  #westBalance,
+  #northBalance,
+  #p1Balance,
+  #p2Balance,
+  #p3Balance {
+    font-weight: 500;
+    font-size: 8px;
+  }
+
+  #forRemark,
+  #stat,
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    border-radius: 3px;
+    font-size: 6.5px;
+  }
+
+  #forColumn2,
+  #forColumn3,
+  #forColumn4 {
+    display: block;
+  }
+
+  #remark {
+    width: 95%;
+    padding: 3px 3px 3px 3px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 5.5px;
+  }
+
+  #se,
+  #mw,
+  #mw1,
+  #mw2,
+  #mw3,
+  #mw4,
+  #mw5,
+  #ng,
+  #ng1,
+  #ng2,
+  #ng3,
+  #lastRow {
+    margin-bottom: 3px;
+  }
+
+  #seInstruction {
+    font-size: 8px;
+  }
+
+  .seinput {
+    width: 50px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 3px;
+    font-size: 8px;
+    margin-bottom: 3px;
+  }
+
+  .selabel {
+    font-size: 8px;
+    font-weight: 500;
+    margin-right: 1.5px;
+  }
+
+  .select {
+    width: 60px;
+    margin-bottom: 3px;
+    padding: 2px;
+    font-size: 8px;
+    border-radius: 5px;
+  }
+
+  .sidebutton {
+    border-radius: 5px;
+    font-size: 8px;
+    width: 45px;
+  }
+
+  .belowbutton {
+    border-radius: 5px;
+    font-size: 8px;
+    width: 45px;
+  }
+
+  .label {
+    font-size: 8px;
+    font-weight: 500;
+    margin-right: 1.5px;
+  }
+
+  .button {
+    border-radius: 5px;
+    font-size: 7px;
+    width: 60px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  #bottomDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  /* #resultentry {
+  background-color: rgb(24, 30, 30);
+  margin: auto;
+  width: 70%;
+  margin-right: 10px;
+} */
+
+  #resultDiv {
+    background-color: rgb(24, 30, 30);
+    width: 95%;
+    /* display: block; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+  }
+
+  #flexRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  #resultentry {
+    background-color: rgb(24, 30, 30);
+    width: 100%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  #mahjongtable {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    margin-bottom: 0px;
+  }
+
+  #aroundtable {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block1,
+  #block3,
+  #block7,
+  #block9 {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block2 {
+    font-size: 9px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-bottom: 2px;
+  }
+
+  #block8 {
+    font-size: 9px;
+    font-weight: 500;
+    width: 60%;
+    aspect-ratio: 3/1;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+    padding-top: 2px;
+  }
+
+  #block4 {
+    font-size: 9px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block4p {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-right: 0px;
+    font-size: 10px;
+  }
+
+  #block6 {
+    font-size: 9px;
+    font-weight: 500;
+    width: 20%;
+    aspect-ratio: 1/3;
+    margin: 0px;
+    border: 0px;
+    gap: 0px;
+  }
+
+  #block6p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    margin: auto;
+    margin-left: 0px;
+    font-size: 10px;
+  }
+
+  #block5 {
+    width: 60%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+  }
+
+  #block5row1,
+  #block5row2,
+  #block5row3 {
+    gap: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block511,
+  #block513,
+  #block531,
+  #block533 {
+    width: 25%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block512,
+  #block532 {
+    width: 50%;
+    aspect-ratio: 2/1;
+    font-size: 8px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block521,
+  #block523 {
+    width: 25%;
+    aspect-ratio: 1/2;
+    font-size: 8px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #block522 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #lastRow {
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  #ng3,
+  #mahjongtable {
+    margin-top: 0px;
+  }
+
+  #seInstruction {
+    margin-bottom: 0px;
+  }
+
+  .col2,
+  .col3,
+  .col4 {
+    display: none;
+  }
+
+  #replacement {
+    display: block;
+    font-size: 8px;
+  }
+
+  #replacementSerial,
+  #replacementRoundNumber,
+  #replacementRound,
+  #replacementZhuang {
+    margin-right: 15px;
+    color: white;
+    font-size: 8px;
+  }
+
+  /* #endof4,
+  #askforshuffle,
+  #pleasechoose {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0px;
+  } */
+}

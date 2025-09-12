@@ -1,0 +1,444 @@
+#body {
+  background-color: brown;
+}
+
+#titleDiv {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: beige;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+#winloss {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+  /* font-size: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#fieldsetDiv {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#th1,
+#th2 {
+  color: yellow;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.td {
+  font-size: 20px;
+}
+
+.winlossInput {
+  font-size: 19px;
+}
+
+#th1 {
+  width: 100px;
+  text-align: left;
+}
+
+#th2 {
+  width: 200px;
+  text-align: left;
+}
+
+td {
+  text-align: left;
+}
+
+#label1 {
+  margin-right: 10px;
+}
+
+#label1,
+#label2 {
+  margin-left: 10px;
+}
+
+#homeDiv,
+#buttonDiv {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#legend {
+  /* width: 100px; */
+  /* margin-right: 10px; */
+  margin-bottom: 0px;
+  color: yellow;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.button {
+  background-color: beige;
+  color: black;
+  font-size: 20px;
+  width: 150px;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+/* #copyrightDiv {
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+} */
+
+@media only screen and (max-width: 1200px) {
+  #titleDiv {
+    font-size: 30px;
+  }
+
+  #winloss {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #fieldsetDiv {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  #th1,
+  #th2 {
+    font-size: 18px;
+  }
+
+  .td {
+    font-size: 18px;
+  }
+
+  .winlossInput {
+    font-size: 17px;
+  }
+
+  #th1 {
+    width: 80px;
+  }
+
+  #th2 {
+    width: 160px;
+  }
+
+  #label1 {
+    margin-right: 10px;
+  }
+
+  #label1,
+  #label2 {
+    margin-left: 10px;
+  }
+
+  #homeDiv,
+  #buttonDiv {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #legend {
+    /* width: 100px; */
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 16px;
+    width: 135px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #titleDiv {
+    font-size: 28px;
+  }
+
+  #winloss {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #fieldsetDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  #th1,
+  #th2 {
+    font-size: 16px;
+  }
+
+  .td {
+    font-size: 16px;
+  }
+
+  .winlossInput {
+    font-size: 15px;
+  }
+
+  #th1 {
+    width: 70px;
+  }
+
+  #th2 {
+    width: 140px;
+  }
+
+  #label1 {
+    margin-right: 8px;
+  }
+
+  #label1,
+  #label2 {
+    margin-left: 8px;
+  }
+
+  #homeDiv,
+  #buttonDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #legend {
+    /* width: 100px; */
+    margin-right: 8px;
+    margin-bottom: 0px;
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #titleDiv {
+    font-size: 26px;
+  }
+
+  #winloss {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #fieldsetDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  #th1,
+  #th2 {
+    font-size: 16px;
+  }
+
+  .td {
+    font-size: 16px;
+  }
+
+  .winlossInput {
+    font-size: 15px;
+  }
+
+  #th1 {
+    width: 70px;
+  }
+
+  #th2 {
+    width: 120px;
+  }
+
+  #label1 {
+    margin-right: 8px;
+  }
+
+  #label1,
+  #label2 {
+    margin-left: 8px;
+  }
+
+  #homeDiv,
+  #buttonDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #legend {
+    /* width: 100px; */
+    margin-right: 8px;
+    margin-bottom: 0px;
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #titleDiv {
+    font-size: 24px;
+  }
+
+  #winloss {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #fieldsetDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  #th1,
+  #th2 {
+    font-size: 16px;
+  }
+
+  .td {
+    font-size: 16px;
+  }
+
+  .winlossInput {
+    font-size: 15px;
+  }
+
+  #th1 {
+    width: 70px;
+  }
+
+  #th2 {
+    width: 100px;
+  }
+
+  #label1 {
+    margin-right: 8px;
+  }
+
+  #label1,
+  #label2 {
+    margin-left: 8px;
+  }
+
+  #homeDiv,
+  #buttonDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #legend {
+    /* width: 100px; */
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 95px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #titleDiv {
+    font-size: 22px;
+  }
+
+  #winloss {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #fieldsetDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  #th1,
+  #th2 {
+    font-size: 16px;
+  }
+
+  .td {
+    font-size: 16px;
+  }
+
+  .winlossInput {
+    font-size: 15px;
+  }
+
+  #th1 {
+    width: 70px;
+  }
+
+  #th2 {
+    width: 80px;
+  }
+
+  #label1 {
+    margin-right: 8px;
+  }
+
+  #label1,
+  #label2 {
+    margin-left: 8px;
+  }
+
+  #homeDiv,
+  #buttonDiv {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  #legend {
+    /* width: 100px; */
+    margin-right: 8px;
+    margin-bottom: 0px;
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 95px;
+  }
+}

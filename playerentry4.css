@@ -1,0 +1,215 @@
+#body {
+  background-color: brown;
+}
+
+#titleDiv {
+  /* width: 80%; */
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: beige;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+#div1,
+#div2 {
+  /* width: 80%; */
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+#player1,
+#player3 {
+  margin-right: 10px;
+}
+
+.label {
+  color: white;
+  margin-right: 10px;
+}
+
+.input {
+  width: 150px;
+}
+
+#buttonDiv {
+  /* width: 80%; */
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.button {
+  background-color: beige;
+  color: black;
+  font-size: 22px;
+  width: 120px;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+/* #copyrightDiv {
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+} */
+
+@media only screen and (max-width: 1200px) {
+  #titleDiv {
+    font-size: 34px;
+  }
+
+  #div1,
+  #div2 {
+    font-size: 22px;
+  }
+
+  #player1,
+  #player3 {
+    margin-right: 10px;
+  }
+
+  .label {
+    margin-right: 10px;
+  }
+
+  .input {
+    width: 140px;
+  }
+
+  .button {
+    font-size: 20px;
+    width: 110px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #titleDiv {
+    font-size: 32px;
+  }
+
+  #div1,
+  #div2 {
+    font-size: 20px;
+  }
+
+  #player1,
+  #player3 {
+    margin-right: 8px;
+  }
+
+  .label {
+    margin-right: 8px;
+  }
+
+  .input {
+    width: 130px;
+  }
+
+  .button {
+    font-size: 18px;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #titleDiv {
+    font-size: 30px;
+  }
+
+  #div1,
+  #div2 {
+    font-size: 18px;
+  }
+
+  #player1,
+  #player3 {
+    margin-right: 8px;
+  }
+
+  .label {
+    margin-right: 8px;
+  }
+
+  .input {
+    width: 120px;
+  }
+
+  .button {
+    font-size: 16px;
+    width: 90px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #titleDiv {
+    font-size: 28px;
+  }
+
+  #div1,
+  #div2 {
+    font-size: 16px;
+  }
+
+  #player1,
+  #player3 {
+    margin-right: 6px;
+  }
+
+  .label {
+    margin-right: 6px;
+  }
+
+  .input {
+    width: 110px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #titleDiv {
+    font-size: 26px;
+  }
+
+  #div1,
+  #div2 {
+    font-size: 14px;
+  }
+
+  #player1,
+  #player3 {
+    margin-right: 6px;
+  }
+
+  .label {
+    margin-right: 6px;
+  }
+
+  .input {
+    width: 100px;
+  }
+
+  .button {
+    font-size: 12px;
+    width: 70px;
+  }
+}

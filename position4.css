@@ -1,0 +1,199 @@
+#body {
+  background-color: brown;
+}
+
+#titleDiv {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: beige;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+#east,
+#south,
+#west,
+#north {
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  /* font-size: 24px; */
+}
+
+.label {
+  color: yellow;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.select {
+  font-size: 24px;
+  width: 250px;
+}
+
+#buttonDiv,
+#homeDiv {
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.button {
+  background-color: beige;
+  color: black;
+  font-size: 20px;
+  width: 120px;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  #titleDiv {
+    font-size: 32px;
+  }
+  /* 
+  #east,
+  #south,
+  #west,
+  #north {
+    font-size: 24px;
+  } */
+
+  .label {
+    font-size: 22px;
+    margin-right: 20px;
+  }
+
+  .select {
+    font-size: 22px;
+    width: 230px;
+  }
+
+  .button {
+    font-size: 20px;
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #titleDiv {
+    font-size: 28px;
+  }
+  /* 
+  #east,
+  #south,
+  #west,
+  #north {
+    font-size: 24px;
+  } */
+
+  .label {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+
+  .select {
+    font-size: 20px;
+    width: 210px;
+  }
+
+  .button {
+    font-size: 18px;
+    width: 110px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #titleDiv {
+    font-size: 24px;
+  }
+  /* 
+  #east,
+  #south,
+  #west,
+  #north {
+    font-size: 24px;
+  } */
+
+  .label {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+
+  .select {
+    font-size: 18px;
+    width: 190px;
+  }
+
+  .button {
+    font-size: 16px;
+    width: 110px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #titleDiv {
+    font-size: 20px;
+  }
+  /* 
+  #east,
+  #south,
+  #west,
+  #north {
+    font-size: 18px;
+  } */
+
+  .label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .select {
+    font-size: 16px;
+    width: 170px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #titleDiv {
+    font-size: 18px;
+  }
+  /* 
+  #east,
+  #south,
+  #west,
+  #north {
+    font-size: 16px;
+  } */
+
+  .label {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .select {
+    font-size: 14px;
+    width: 150px;
+  }
+
+  .button {
+    font-size: 12px;
+    width: 100px;
+  }
+}

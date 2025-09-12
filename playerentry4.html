@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player entry 4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="playerentry4.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+HK:wght@100;300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/147b2895a5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="body">
+    <div id="titleDiv">玩家輸入</div>
+
+    <div id="div1">
+      <label class="label">玩家一 </label>
+      <input class="input" type="text" id="player1" maxlength="8" />
+      <label class="label">玩家二 </label>
+      <input class="input" type="text" id="player2" maxlength="8" />
+    </div>
+
+    <div id="div2">
+      <label class="label">玩家三 </label>
+      <input class="input" type="text" id="player3" maxlength="8" />
+      <label class="label">玩家四 </label>
+      <input class="input" type="text" id="player4" maxlength="8" />
+    </div>
+
+    <div id="buttonDiv">
+      <button
+        class="button"
+        id="submitbutton"
+        type="button"
+        onclick="savePlayer()"
+      >
+        提交
+      </button>
+      <button class="button" id="resetbutton" type="reset" onclick="reset()">
+        重設
+      </button>
+      <button
+        class="button"
+        id="homebutton"
+        type="button"
+        onclick="window.location.href = 'index.html'"
+      >
+        回到主頁
+      </button>
+    </div>
+
+    <!-- <div id="copyrightDiv">
+      <p>
+        &copy; <span id="copyright"></span> bigeyedog.studio All rights
+        reserved.
+      </p>
+    </div> -->
+
+    <!-- <script>
+      const startYear = 2025; // Replace with your starting year
+      const currentYear = new Date().getFullYear();
+      const copyrightText =
+        startYear === currentYear
+          ? currentYear
+          : `${startYear} - ${currentYear}`;
+      document.getElementById("copyright").textContent = copyrightText;
+    </script> -->
+
+    <script>
+      function savePlayer() {
+        const player1 = $("#player1").val();
+        const player2 = $("#player2").val();
+        const player3 = $("#player3").val();
+        const player4 = $("#player4").val();
+        console.log(player1, player2, player3);
+        if (player1 == "" || player2 == "" || player3 == "" || player4 == "") {
+          alert("請填上所有玩家名字。");
+          return;
+        }
+
+        if (
+          player1 === "NA" ||
+          player2 === "NA" ||
+          player3 === "NA" ||
+          player4 === "NA"
+        ) {
+          alert("不可使用'NA'作名字。");
+          return;
+        }
+
+        if (
+          player1 === "請選擇" ||
+          player2 === "請選擇" ||
+          player3 === "請選擇" ||
+          player4 === "請選擇"
+        ) {
+          alert("不可使用'請選擇'作名字。");
+          return;
+        }
+
+        const player1LC = player1.toLowerCase();
+        const player2LC = player2.toLowerCase();
+        const player3LC = player3.toLowerCase();
+        const player4LC = player4.toLowerCase();
+        const playerArray = [player1LC, player2LC, player3LC, player4LC];
+
+        function hasDuplicates(playerArray) {
+          return new Set(playerArray).size !== playerArray.length;
+        }
+
+        if (hasDuplicates(playerArray)) {
+          alert("名字不可重複。");
+          return;
+        }
+
+        sessionStorage.setItem("player1", player1);
+        sessionStorage.setItem("player2", player2);
+        sessionStorage.setItem("player3", player3);
+        sessionStorage.setItem("player4", player4);
+        sessionStorage.setItem("numberOfPlayers", 4);
+        window.location.href = "fanshu.html";
+      }
+
+      function reset() {
+        $("#player1, #player2, #player3, #player4").val("");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game settings</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="gamesetting.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+HK:wght@100;300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/147b2895a5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="body">
+    <div id="line1">
+      設定:
+      <p style="display: inline-block" id="fullNotfull"></p>
+      ,
+      <p style="display: inline-block" id="passZhuang"></p>
+    </div>
+
+    <div id="line2">應付金額(每位)</div>
+
+    <table id="fanshuWinloss">
+      <thead>
+        <tr>
+          <th class="th">番數</th>
+          <th class="th">自摸</th>
+          <th class="th">出冲玩家</th>
+          <th class="th">非出冲玩家</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <div id="buttonDiv">
+      <button class="button" type="button" onclick="window.close()">
+        關閉
+      </button>
+    </div>
+
+    <!-- <div id="copyrightDiv">
+      <p>
+        &copy; <span id="copyright"></span> bigeyedog.studio All rights
+        reserved.
+      </p>
+    </div> -->
+
+    <!-- <script>
+      const startYear = 2025; // Replace with your starting year
+      const currentYear = new Date().getFullYear();
+      const copyrightText =
+        startYear === currentYear
+          ? currentYear
+          : `${startYear} - ${currentYear}`;
+      document.getElementById("copyright").textContent = copyrightText;
+    </script> -->
+
+    <script>
+      const smallestfan = sessionStorage.getItem("smallestfan");
+      const biggestfan = sessionStorage.getItem("biggestfan");
+      const fullNotfull = sessionStorage.getItem("fullNotfull");
+      const passZhuang = sessionStorage.getItem("passZhuang");
+      const customFSArray = JSON.parse(sessionStorage.getItem("customFSArray"));
+      const finalzimoArray = JSON.parse(
+        sessionStorage.getItem("finalzimoArray")
+      );
+      const finalcc0Array = JSON.parse(sessionStorage.getItem("finalcc0Array"));
+      const finalcc1Array = JSON.parse(sessionStorage.getItem("finalcc1Array"));
+      const finalcc2Array = JSON.parse(sessionStorage.getItem("cc2Array"));
+      const finalcc3Array = JSON.parse(sessionStorage.getItem("finalcc3Array"));
+
+      console.log(
+        smallestfan,
+        biggestfan,
+        fullNotfull,
+        customFSArray,
+        finalzimoArray,
+        finalcc0Array,
+        finalcc1Array,
+        finalcc2Array,
+        finalcc3Array
+      );
+    </script>
+
+    <script>
+      const fsLength = customFSArray.length;
+
+      for (let i = 0; i < fsLength; i++) {
+        const $row = $("<tr></tr>");
+
+        const $fanshu = $("<td></td>").text(customFSArray[i]).addClass("td");
+        const $zimo = $("<td></td>").text(finalzimoArray[i]).addClass("td");
+        const $ccplayerFull = $("<td></td>")
+          .text(finalcc1Array[i])
+          .addClass("td");
+        const $nccplayerFull = $("<td></td>").text(0).addClass("td");
+        const $ccplayerHalf = $("<td></td>")
+          .text(finalcc2Array[i])
+          .addClass("td");
+        const $nccplayerHalf = $("<td></td>")
+          .text(finalcc3Array[i])
+          .addClass("td");
+
+        if (fullNotfull === "全銃") {
+          $row
+            .append($fanshu)
+            .append($zimo)
+            .append($ccplayerFull)
+            .append($nccplayerFull);
+        } else if (fullNotfull === "半銃") {
+          $row
+            .append($fanshu)
+            .append($zimo)
+            .append($ccplayerHalf)
+            .append($nccplayerHalf);
+        }
+
+        $("#tbody").append($row);
+      }
+
+      $("#fullNotfull").text(fullNotfull);
+      $("#passZhuang").text(passZhuang);
+    </script>
+
+    <script>
+      function reset() {
+        for (let i = 0; i < fsLength; i++) {
+          const inputID = "#" + customFSArray[i];
+          if (inputID !== "#雞糊") {
+            $(inputID).val("");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

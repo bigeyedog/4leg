@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="position4.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+HK:wght@100;300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/147b2895a5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="body">
+    <div id="titleDiv">風位設定</div>
+
+    <div id="east">
+      <label class="label" for="playersDDList">東</label>
+      <select class="select" name="east" id="eastPlayer" required>
+        <option class="option" selected disabled data-default value="">
+          請選擇
+        </option>
+        <option class="option" id="eastOption1"></option>
+        <option class="option" id="eastOption2"></option>
+        <option class="option" id="eastOption3"></option>
+        <option class="option" id="eastOption4"></option>
+      </select>
+    </div>
+
+    <div id="south">
+      <label class="label" for="playersDDList">南</label>
+      <select class="select" name="south" id="southPlayer" required>
+        <option class="option" selected disabled data-default value="">
+          請選擇
+        </option>
+        <option class="option" id="southOption1"></option>
+        <option class="option" id="southOption2"></option>
+        <option class="option" id="southOption3"></option>
+        <option class="option" id="southOption4"></option>
+      </select>
+    </div>
+
+    <div id="west">
+      <label class="label" for="playersDDList">西</label>
+      <select class="select" name="west" id="westPlayer" required>
+        <option class="option" selected disabled data-default value="">
+          請選擇
+        </option>
+        <option class="option" id="westOption1"></option>
+        <option class="option" id="westOption2"></option>
+        <option class="option" id="westOption3"></option>
+        <option class="option" id="westOption4"></option>
+      </select>
+    </div>
+
+    <div id="north">
+      <label class="label" for="playersDDList">北</label>
+      <select class="select" name="north" id="northPlayer" required>
+        <option class="option" selected disabled data-default value="">
+          請選擇
+        </option>
+        <option class="option" id="northOption1"></option>
+        <option class="option" id="northOption2"></option>
+        <option class="option" id="northOption3"></option>
+        <option class="option" id="northOption4"></option>
+      </select>
+    </div>
+
+    <div id="buttonDiv">
+      <button class="button" type="button" onclick="confirmPosition()">
+        確認
+      </button>
+      <button class="button" type="reset" onclick="reset()">重設</button>
+    </div>
+
+    <div id="homeDiv">
+      <button
+        class="button"
+        id="backbutton"
+        type="button"
+        onclick="window.history.back()"
+      >
+        回到上一頁
+      </button>
+      <button
+        class="button"
+        id="homebutton"
+        type="button"
+        onclick="window.location.href='index.html'"
+      >
+        回到主頁
+      </button>
+    </div>
+
+    <script>
+      const player1 = sessionStorage.getItem("player1");
+      const player2 = sessionStorage.getItem("player2");
+      const player3 = sessionStorage.getItem("player3");
+      const player4 = sessionStorage.getItem("player4");
+
+      $("#eastOption1, #southOption1, #westOption1, #northOption1").val(
+        player1
+      );
+      $("#eastOption2, #southOption2, #westOption2, #northOption2").val(
+        player2
+      );
+      $("#eastOption3, #southOption3, #westOption3, #northOption3").val(
+        player3
+      );
+      $("#eastOption4, #southOption4, #westOption4, #northOption4").val(
+        player4
+      );
+
+      $("#eastOption1, #southOption1, #westOption1, #northOption1").text(
+        player1
+      );
+      $("#eastOption2, #southOption2, #westOption2, #northOption2").text(
+        player2
+      );
+      $("#eastOption3, #southOption3, #westOption3, #northOption3").text(
+        player3
+      );
+      $("#eastOption4, #southOption4, #westOption4, #northOption4").text(
+        player4
+      );
+    </script>
+
+    <script>
+      function confirmPosition() {
+        const eastPlayer = $("#eastPlayer").val();
+        const southPlayer = $("#southPlayer").val();
+        const westPlayer = $("#westPlayer").val();
+        const northPlayer = $("#northPlayer").val();
+        if (!eastPlayer || !southPlayer || !westPlayer || !northPlayer) {
+          alert("請設定所有風位。");
+          return;
+        } else {
+          const playerArray = [
+            eastPlayer.toLowerCase(),
+            southPlayer.toLowerCase(),
+            westPlayer.toLowerCase(),
+            northPlayer.toLowerCase(),
+          ];
+
+          function hasDuplicates(playerArray) {
+            return new Set(playerArray).size !== playerArray.length;
+          }
+
+          if (hasDuplicates(playerArray)) {
+            alert("不可重複玩家名字。");
+            return;
+          }
+        }
+
+        sessionStorage.setItem("eastPlayer", eastPlayer);
+        sessionStorage.setItem("southPlayer", southPlayer);
+        sessionStorage.setItem("westPlayer", westPlayer);
+        sessionStorage.setItem("northPlayer", northPlayer);
+
+        const startArray = [1, 1, "東", eastPlayer];
+        const masterArray = [];
+        masterArray.push(startArray);
+        sessionStorage.setItem("masterArray", JSON.stringify(masterArray));
+
+        const multiplewinnerArray = [];
+        multiplewinnerArray.push("dummy");
+        sessionStorage.setItem(
+          "multiplewinnerArray",
+          JSON.stringify(multiplewinnerArray)
+        );
+
+        window.open("gameinprogress4.html", "_blank");
+        //window.location.href = "gameinprogress.html";
+      }
+
+      function reset() {
+        $("#eastPlayer, #southPlayer, #westPlayer, #northPlayer").val("請選擇");
+      }
+    </script>
+  </body>
+</html>

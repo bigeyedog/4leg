@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winloss 4 settings</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="winloss4.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+HK:wght@100;300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/147b2895a5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="body">
+    <div id="titleDiv">輸贏金額設定</div>
+
+    <div id="winloss">
+      <table id="winlossTable">
+        <thead>
+          <tr>
+            <th id="th1">番數</th>
+            <th id="th2">自摸應付金額(每位)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="fieldsetDiv">
+      <fieldset>
+        <legend id="legend">請選擇:</legend>
+        <input type="radio" id="Choice1" name="type" value="全銃" required />
+        <label for="Choice1" id="label1">全銃</label>
+        <input type="radio" id="Choice2" name="type" value="半銃" required />
+        <label for="Choice2" id="label2">半銃</label>
+      </fieldset>
+    </div>
+
+    <div id="fieldsetDiv">
+      <fieldset>
+        <legend id="legend">請選擇:</legend>
+        <input
+          type="radio"
+          id="Choice1"
+          name="passZhuang"
+          value="和牌過莊"
+          required
+        />
+        <label for="Choice1" id="label1">和牌過莊</label>
+        <input
+          type="radio"
+          id="Choice2"
+          name="passZhuang"
+          value="和牌冧莊"
+          required
+        />
+        <label for="Choice2" id="label2">和牌冧莊</label>
+      </fieldset>
+    </div>
+
+    <div id="buttonDiv">
+      <button class="button" type="button" onclick="setwinloss()">輸入</button>
+      <!-- <button class="button" id="resetbutton" type="reset" onclick="reset()">
+        重設
+      </button> -->
+    </div>
+
+    <div id="homeDiv">
+      <button
+        type="button"
+        class="button"
+        id="backButton"
+        onclick="window.history.back()"
+      >
+        回到上一頁
+      </button>
+      <button
+        type="button"
+        class="button"
+        id="homeButton"
+        onclick="window.location.href='index.html'"
+      >
+        回到主頁
+      </button>
+    </div>
+
+    <!-- <div id="copyrightDiv">
+      <p>
+        &copy; <span id="copyright"></span> bigeyedog.studio All rights
+        reserved.
+      </p>
+    </div> -->
+
+    <!-- <script>
+      const startYear = 2025; // Replace with your starting year
+      const currentYear = new Date().getFullYear();
+      const copyrightText =
+        startYear === currentYear
+          ? currentYear
+          : `${startYear} - ${currentYear}`;
+      document.getElementById("copyright").textContent = copyrightText;
+    </script> -->
+
+    <script>
+      const smallestfan = Number(sessionStorage.getItem("smallestfan"));
+      const biggestfan = Number(sessionStorage.getItem("biggestfan"));
+      console.log(smallestfan, biggestfan);
+
+      const chineseNumbers = [
+        "零",
+        "一",
+        "二",
+        "三",
+        "四",
+        "五",
+        "六",
+        "七",
+        "八",
+        "九",
+      ];
+      const units = ["", "十", "百", "千", "万"]; // Chinese number units
+      const chineseFSArray = [];
+
+      for (let i = smallestfan; i <= biggestfan; i++) {
+        if (biggestfan < 10) {
+          // Directly push single-digit numbers
+          chineseFSArray.push(chineseNumbers[i]);
+        } else {
+          let result = "";
+          let numStr = i.toString();
+          let length = numStr.length;
+          let zeroFlag = false; // Track consecutive zeros
+
+          for (let j = 0; j < length; j++) {
+            let digit = parseInt(numStr[j]);
+            let unit = units[length - 1 - j];
+
+            if (digit !== 0) {
+              if (zeroFlag) {
+                result += "零"; // Add zero only once when transitioning from zero
+                zeroFlag = false;
+              }
+              result +=
+                digit === 1 && unit === "十" && j === 0
+                  ? unit
+                  : chineseNumbers[digit] + unit;
+            } else {
+              zeroFlag = true; // Mark zero occurrence
+            }
+          }
+
+          chineseFSArray.push(result.replace(/零+$/, "")); // Remove trailing zeros
+        }
+      }
+
+      console.log(chineseFSArray);
+
+      const customFSArray = [];
+      if (smallestfan == "0") {
+        customFSArray.push("雞糊");
+        for (let i = 1; i <= biggestfan; i++) {
+          customFSArray.push(chineseFSArray[i] + "番");
+        }
+      } else if (smallestfan > 0) {
+        for (let i = smallestfan; i <= biggestfan; i++) {
+          customFSArray.push(chineseFSArray[i - smallestfan] + "番");
+        }
+      }
+      console.log(customFSArray);
+
+      const fsLength = customFSArray.length;
+
+      for (let i = 0; i < fsLength; i++) {
+        // Create a new table row each iteration
+        const $row = $("<tr></tr>");
+
+        // Create and append the "番数" cell
+        const $fanshu = $("<td></td>").text(customFSArray[i]);
+        $fanshu.addClass("td");
+
+        // Create and append the input cell
+        const $zimo = $("<td></td>");
+        const zimoID = "zimo" + customFSArray[i];
+        const $zimoInput = $("<input>")
+          .attr("class", "winlossInput")
+          .attr("id", zimoID)
+          .attr("type", "number")
+          .attr("min", 0)
+          .attr("step", 0.1)
+          .attr("required", true);
+        $zimo.append($zimoInput);
+
+        // Append both cells to the row
+        $row.append($fanshu).append($zimo);
+
+        // Append the row to the table body
+        $("#winlossTable tbody").append($row);
+      }
+
+      const zerofanID = "#zimo" + customFSArray[0];
+      if (smallestfan === 0) {
+        $(zerofanID).val(0);
+        $(zerofanID).attr("readonly", true);
+      }
+
+      function setwinloss() {
+        for (let i = 0; i < fsLength; i++) {
+          const inputID = "#" + customFSArray[i];
+          if ($(inputID).val() === "") {
+            // $(zerofanID).val(0);
+            // $(zerofanID).attr("readonly", true);
+            alert("請填上所有金額。");
+            return;
+          }
+        }
+
+        const selected = $('input[name="type"]:checked');
+        if (selected.length === 0) {
+          alert("請選擇全銃或半銃.");
+          return;
+        }
+
+        const fullNotfull = $('input[name="type"]:checked').val();
+        console.log(fullNotfull);
+
+        const zimoArray = [];
+        for (let i = 0; i < fsLength; i++) {
+          const inputID = "#zimo" + customFSArray[i];
+          zimoArray.push($(inputID).val());
+        }
+        console.log(zimoArray);
+
+        const zimoArrayLength = zimoArray.length;
+
+        const cc0Array = [];
+        const cc1Array = [];
+        const cc2Array = [];
+        const cc3Array = [];
+        if (smallestfan > 0) {
+          for (let i = 0; i < zimoArrayLength; i++) {
+            const cc1Value = Number(zimoArray[i]) * 2;
+            const cc2Value = Number(zimoArray[i]) * 1;
+            const cc3Value = Number(zimoArray[i]) * 0.5;
+            cc1Array.push(cc1Value);
+            cc2Array.push(cc2Value);
+            cc3Array.push(cc3Value);
+            cc0Array.push(0);
+          }
+        } else if (smallestfan === 0) {
+          cc1Array.push(Number(zimoArray[1]) * 1);
+          cc2Array.push(Number(zimoArray[1]) * 0.5);
+          cc3Array.push(Number(zimoArray[1]) * 0.25);
+          cc0Array.push(0);
+          for (let i = 1; i < zimoArrayLength; i++) {
+            const cc1Value = Number(zimoArray[i]) * 2;
+            const cc2Value = Number(zimoArray[i]) * 1;
+            const cc3Value = Number(zimoArray[i]) * 0.5;
+            cc1Array.push(cc1Value);
+            cc2Array.push(cc2Value);
+            cc3Array.push(cc3Value);
+            cc0Array.push(0);
+          }
+        }
+        console.log(zimoArray, cc0Array, cc1Array, cc2Array, cc3Array);
+
+        const passZhuang = $('input[name="passZhuang"]:checked').val();
+        console.log(passZhuang);
+
+        sessionStorage.setItem("customFSArray", JSON.stringify(customFSArray));
+        sessionStorage.setItem("zimoArray", JSON.stringify(zimoArray));
+        sessionStorage.setItem("cc0Array", JSON.stringify(cc0Array));
+        sessionStorage.setItem("cc1Array", JSON.stringify(cc1Array));
+        sessionStorage.setItem("cc2Array", JSON.stringify(cc2Array));
+        sessionStorage.setItem("cc3Array", JSON.stringify(cc3Array));
+        sessionStorage.setItem("fullNotfull", fullNotfull);
+        sessionStorage.setItem("passZhuang", passZhuang);
+        window.location.href = "autofill.html";
+      }
+    </script>
+
+    <script>
+      function reset() {
+        for (let i = 0; i < fsLength; i++) {
+          const inputID = "#" + customFSArray[i];
+          if (inputID !== "#雞糊") {
+            $(inputID).val("");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
