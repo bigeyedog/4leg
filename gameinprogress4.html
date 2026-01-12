@@ -1075,16 +1075,24 @@
 
         $("#tbody1").append($row);
 
-        $("#eastBalance").text(masterArray[maLength - 1][16]);
-        $("#southBalance").text(masterArray[maLength - 1][17]);
-        $("#westBalance").text(masterArray[maLength - 1][18]);
-        $("#northBalance").text(masterArray[maLength - 1][19]);
+        $("#eastBalance").text(
+          Number(masterArray[maLength - 1][16].toFixed(2))
+        );
+        $("#southBalance").text(
+          Number(masterArray[maLength - 1][17].toFixed(2))
+        );
+        $("#westBalance").text(
+          Number(masterArray[maLength - 1][18].toFixed(2))
+        );
+        $("#northBalance").text(
+          Number(masterArray[maLength - 1][19].toFixed(2))
+        );
 
         const balanceArray = [
-          Number(masterArray[maLength - 1][16]),
-          Number(masterArray[maLength - 1][17]),
-          Number(masterArray[maLength - 1][18]),
-          Number(masterArray[maLength - 1][19]),
+          Number(masterArray[maLength - 1][16].toFixed(2)),
+          Number(masterArray[maLength - 1][17].toFixed(2)),
+          Number(masterArray[maLength - 1][18].toFixed(2)),
+          Number(masterArray[maLength - 1][19].toFixed(2)),
         ];
         const balanceCellID = [
           "#eastBalance",
@@ -1912,16 +1920,21 @@
           northBalance
         );
 
-        $("#eastBalance").text(eastBalance);
-        $("#southBalance").text(southBalance);
-        $("#westBalance").text(westBalance);
-        $("#northBalance").text(northBalance);
+        const eastBalance2Decimal = Number(Number(eastBalance).toFixed(2));
+        const southBalance2Decimal = Number(Number(southBalance).toFixed(2));
+        const westBalance2Decimal = Number(Number(westBalance).toFixed(2));
+        const northBalance2Decimal = Number(Number(northBalance).toFixed(2));
+
+        $("#eastBalance").text(eastBalance2Decimal);
+        $("#southBalance").text(southBalance2Decimal);
+        $("#westBalance").text(westBalance2Decimal);
+        $("#northBalance").text(northBalance2Decimal);
 
         const balanceArray = [
-          eastBalance,
-          southBalance,
-          westBalance,
-          northBalance,
+          eastBalance2Decimal,
+          southBalance2Decimal,
+          westBalance2Decimal,
+          northBalance2Decimal,
         ];
         const balanceCellID = [
           "#eastBalance",
@@ -1959,6 +1972,11 @@
         const col11text = $(westID).text();
         const col12text = $(northID).text();
 
+        const col9text2Decimal = Number(Number(col9text).toFixed(2));
+        const col10text2Decimal = Number(Number(col10text).toFixed(2));
+        const col11text2Decimal = Number(Number(col11text).toFixed(2));
+        const col12text2Decimal = Number(Number(col12text).toFixed(2));
+
         const newArray = [
           serial,
           roundnumber,
@@ -1968,18 +1986,18 @@
           col6text,
           col7text,
           col8text,
-          col9text,
-          col10text,
-          col11text,
-          col12text,
+          col9text2Decimal,
+          col10text2Decimal,
+          col11text2Decimal,
+          col12text2Decimal,
           nextSerial,
           nextRoundNumber,
           nextRound,
           nextZhuang,
-          eastBalance,
-          southBalance,
-          westBalance,
-          northBalance,
+          eastBalance2Decimal,
+          southBalance2Decimal,
+          westBalance2Decimal,
+          northBalance2Decimal,
         ];
         masterArray.push(newArray);
         console.log(masterArray);
@@ -2233,16 +2251,21 @@
           northBalance
         );
 
-        $("#eastBalance").text(eastBalance);
-        $("#southBalance").text(southBalance);
-        $("#westBalance").text(westBalance);
-        $("#northBalance").text(northBalance);
+        const eastBalance2Decimal = Number(Number(eastBalance).toFixed(2));
+        const southBalance2Decimal = Number(Number(southBalance).toFixed(2));
+        const westBalance2Decimal = Number(Number(westBalance).toFixed(2));
+        const northBalance2Decimal = Number(Number(northBalance).toFixed(2));
+
+        $("#eastBalance").text(eastBalance2Decimal);
+        $("#southBalance").text(southBalance2Decimal);
+        $("#westBalance").text(westBalance2Decimal);
+        $("#northBalance").text(northBalance2Decimal);
 
         const balanceArray = [
-          eastBalance,
-          southBalance,
-          westBalance,
-          northBalance,
+          eastBalance2Decimal,
+          southBalance2Decimal,
+          westBalance2Decimal,
+          northBalance2Decimal,
         ];
         const balanceCellID = [
           "#eastBalance",
@@ -2285,6 +2308,11 @@
         const col11text = $(westID).text();
         const col12text = $(northID).text();
 
+        const col9text2Decimal = Number(Number(col9text).toFixed(2));
+        const col10text2Decimal = Number(Number(col10text).toFixed(2));
+        const col11text2Decimal = Number(Number(col11text).toFixed(2));
+        const col12text2Decimal = Number(Number(col12text).toFixed(2));
+
         const newArray = [
           serial,
           roundnumber,
@@ -2294,18 +2322,18 @@
           col6text,
           col7text,
           col8text,
-          col9text,
-          col10text,
-          col11text,
-          col12text,
+          col9text2Decimal,
+          col10text2Decimal,
+          col11text2Decimal,
+          col12text2Decimal,
           nextSerial,
           nextRoundNumber,
           nextRound,
           inputZhuang,
-          eastBalance,
-          southBalance,
-          westBalance,
-          northBalance,
+          eastBalance2Decimal,
+          southBalance2Decimal,
+          westBalance2Decimal,
+          northBalance2Decimal,
         ];
         masterArray.push(newArray);
         console.log(masterArray);
@@ -2407,16 +2435,21 @@
               northBalance
             );
 
-            $("#eastBalance").text(eastBalance);
-            $("#southBalance").text(southBalance);
-            $("#westBalance").text(westBalance);
-            $("#northBalance").text(northBalance);
+            const eastBalance2Decimal = Number(eastBalance.toFixed(2));
+            const southBalance2Decimal = Number(southBalance.toFixed(2));
+            const westBalance2Decimal = Number(westBalance.toFixed(2));
+            const northBalance2Decimal = Number(northBalance.toFixed(2));
+
+            $("#eastBalance").text(eastBalance2Decimal);
+            $("#southBalance").text(southBalance2Decimal);
+            $("#westBalance").text(westBalance2Decimal);
+            $("#northBalance").text(northBalance2Decimal);
 
             const balanceArray = [
-              eastBalance,
-              southBalance,
-              westBalance,
-              northBalance,
+              eastBalance2Decimal,
+              southBalance2Decimal,
+              westBalance2Decimal,
+              northBalance2Decimal,
             ];
             const balanceCellID = [
               "#eastBalance",

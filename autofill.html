@@ -140,7 +140,7 @@
           .attr("step", 0.1)
           .attr("required", true)
           .attr("readonly", true)
-          .attr("value", Number(zimoArray[i]));
+          .attr("value", Number(Number(zimoArray[i]).toFixed(2)));
         $zimo.append($zimoInput);
 
         const $cc0 = $("<td></td>");
@@ -153,7 +153,7 @@
           .attr("step", 0.1)
           .attr("required", true)
           .attr("readonly", true)
-          .attr("value", cc0Array[i]);
+          .attr("value", Number(Number(cc0Array[i]).toFixed(2)));
         $cc0.append($cc0Input);
 
         const $cc1 = $("<td></td>");
@@ -166,7 +166,7 @@
           .attr("step", 0.1)
           .attr("required", true)
           .attr("readonly", true)
-          .attr("value", cc1Array[i]);
+          .attr("value", Number(Number(cc1Array[i]).toFixed(2)));
         $cc1.append($cc1Input);
 
         const $cc2 = $("<td></td>");
@@ -179,7 +179,7 @@
           .attr("step", 0.1)
           .attr("required", true)
           .attr("readonly", true)
-          .attr("value", cc2Array[i]);
+          .attr("value", Number(Number(cc2Array[i]).toFixed(2)));
         $cc2.append($cc2Input);
 
         const $cc3 = $("<td></td>");
@@ -192,7 +192,7 @@
           .attr("step", 0.1)
           .attr("required", true)
           .attr("readonly", true)
-          .attr("value", cc3Array[i]);
+          .attr("value", Number(Number(cc3Array[i]).toFixed(2)));
         $cc3.append($cc3Input);
 
         // Append cells to the row
@@ -246,9 +246,9 @@
             const zimoID = "#zimo" + customFSArray[i];
             const cc0ID = "#cc0" + customFSArray[i];
             const cc1ID = "#cc1" + customFSArray[i];
-            finalzimoArray.push(Number($(zimoID).val()));
-            finalcc0Array.push(Number($(cc0ID).val()));
-            finalcc1Array.push(Number($(cc1ID).val()));
+            finalzimoArray.push(Number(Number($(zimoID).val()).toFixed(2)));
+            finalcc0Array.push(Number(Number($(cc0ID).val()).toFixed(2)));
+            finalcc1Array.push(Number(Number($(cc1ID).val()).toFixed(2)));
             sessionStorage.setItem(
               "finalzimoArray",
               JSON.stringify(finalzimoArray)
@@ -267,9 +267,9 @@
             const zimoID = "#zimo" + customFSArray[i];
             const cc2ID = "#cc2" + customFSArray[i];
             const cc3ID = "#cc3" + customFSArray[i];
-            finalzimoArray.push(Number($(zimoID).val()));
-            finalcc2Array.push(Number($(cc2ID).val()));
-            finalcc3Array.push(Number($(cc3ID).val()));
+            finalzimoArray.push(Number(Number($(zimoID).val()).toFixed(2)));
+            finalcc2Array.push(Number(Number($(cc2ID).val()).toFixed(2)));
+            finalcc3Array.push(Number(Number($(cc3ID).val()).toFixed(2)));
             sessionStorage.setItem(
               "finalzimoArray",
               JSON.stringify(finalzimoArray)
