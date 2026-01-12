@@ -1299,10 +1299,10 @@
           );
 
           if (cczmtype === "(包)自摸") {
-            $(winner1ID).text(Number(zimoAmount1) * 3);
-            $(winner2ID).text(Number(zimoAmount2) * 3);
+            $(winner1ID).text(Number(zimoAmount1 * 3));
+            $(winner2ID).text(Number(zimoAmount2 * 3));
             $(ccplayerSpecialID).text(
-              Number(-zimoAmount1) * 3 + Number(-zimoAmount2) * 3
+              Number(-zimoAmount1 * 3) + Number(-zimoAmount2 * 3)
             );
             $(nccplayerID).text(0);
           } else if (cczmtype === "(包)出冲") {
@@ -1486,13 +1486,13 @@
           );
 
           if (cczmtype === "(包)自摸") {
-            $(winner1ID).text(Number(zimoAmount1) * 3);
-            $(winner2ID).text(Number(zimoAmount2) * 3);
-            $(winner3ID).text(Number(zimoAmount3) * 3);
+            $(winner1ID).text(Number(zimoAmount1 * 3));
+            $(winner2ID).text(Number(zimoAmount2 * 3));
+            $(winner3ID).text(Number(zimoAmount3 * 3));
             $(ccplayerSpecialID).text(
-              Number(-zimoAmount1) * 3 +
-                Number(-zimoAmount2) * 3 +
-                Number(-zimoAmount3) * 3
+              Number(-zimoAmount1 * 3) +
+                Number(-zimoAmount2 * 3) +
+                Number(-zimoAmount3 * 3)
             );
           } else if (cczmtype === "(包)出冲") {
             $(winner1ID).text(Number(cc1Amount1));
@@ -1699,7 +1699,7 @@
           );
 
           if (cczmtype === "自摸") {
-            $(winnerCellID).text(Number(zimoAmount) * 3);
+            $(winnerCellID).text(Number(zimoAmount * 3));
             $(nccplayer1ID).text(Number(-zimoAmount));
             $(nccplayer2ID).text(Number(-zimoAmount));
             $(nccplayer3ID).text(Number(-zimoAmount));
@@ -1726,9 +1726,9 @@
             $(nccplayer2ID).text(Number(-cc0Amount));
           } else if (cczmtype === "(包)自摸") {
             $(winnerCellID).text(
-              Number(zimoAmount) * 3 + Number(cc0Amount) + Number(cc0Amount)
+              Number(zimoAmount * 3) + Number(cc0Amount) + Number(cc0Amount)
             );
-            $(bzmplayerID).text(Number(-zimoAmount) * 3);
+            $(bzmplayerID).text(Number(-zimoAmount * 3));
             $(nccplayer1ID).text(Number(-cc0Amount));
             $(nccplayer2ID).text(Number(-cc0Amount));
           }
@@ -2054,10 +2054,10 @@
         //   return;
         // } else {
         const inputAmountSum =
-          parseFloat($("#p1amount").val()) +
-          parseFloat($("#p2amount").val()) +
-          parseFloat($("#p3amount").val()) +
-          parseFloat($("#p4amount").val());
+          parseFloat($("#p1amount").val()) * 100 +
+          parseFloat($("#p2amount").val()) * 100 +
+          parseFloat($("#p3amount").val()) * 100 +
+          parseFloat($("#p4amount").val()) * 100;
         console.log(inputAmountSum);
 
         if (inputAmountSum !== 0) {
