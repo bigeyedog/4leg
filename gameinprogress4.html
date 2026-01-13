@@ -568,7 +568,7 @@
                 <input
                   class="seinput"
                   type="number"
-                  step="0.1"
+                  oninput="this.value = this.value.match(/^-?\d*(?:\.\d{0,2})?/)[0]"
                   name="p1amount"
                   id="p1amount"
                   required
@@ -579,7 +579,7 @@
                 <input
                   class="seinput"
                   type="number"
-                  step="0.1"
+                  oninput="this.value = this.value.match(/^-?\d*(?:\.\d{0,2})?/)[0]"
                   name="p2amount"
                   id="p2amount"
                   required
@@ -590,7 +590,7 @@
                 <input
                   class="seinput"
                   type="number"
-                  step="0.1"
+                  oninput="this.value = this.value.match(/^-?\d*(?:\.\d{0,2})?/)[0]"
                   name="p3amount"
                   id="p3amount"
                   required
@@ -601,7 +601,7 @@
                 <input
                   class="seinput"
                   type="number"
-                  step="0.1"
+                  oninput="this.value = this.value.match(/^-?\d*(?:\.\d{0,2})?/)[0]"
                   name="p4amount"
                   id="p4amount"
                   required
@@ -1167,10 +1167,10 @@
         let winner3 = "";
 
         if (inputFanshu === "和局") {
-          $(fanshuID).text("NA");
-          $(winnerID).text("NA");
+          $(fanshuID).text("---");
+          $(winnerID).text("---");
           $(eattypeID).text("和局");
-          $(ccplayerID).text("NA");
+          $(ccplayerID).text("---");
           $(eastID).text(0);
           $(southID).text(0);
           $(westID).text(0);
@@ -1194,7 +1194,7 @@
           );
 
           $(fanshuID).text("雙響");
-          $(winnerID).text("x2");
+          $(winnerID).text("備注");
           $(eattypeID).text(cczmtype);
           $(ccplayerID).text(ccplayerSpecial);
 
@@ -1275,16 +1275,16 @@
           }
           console.log(indexNumber1, indexNumber2);
 
-          const zimoAmount1 = Number(finalzimoArray[indexNumber1]);
-          const cc0Amount1 = Number(finalcc0Array[indexNumber1]);
-          const cc1Amount1 = Number(finalcc1Array[indexNumber1]);
-          const cc2Amount1 = Number(finalcc2Array[indexNumber1]);
-          const cc3Amount1 = Number(finalcc3Array[indexNumber1]);
-          const zimoAmount2 = Number(finalzimoArray[indexNumber2]);
-          const cc0Amount2 = Number(finalcc0Array[indexNumber2]);
-          const cc1Amount2 = Number(finalcc1Array[indexNumber2]);
-          const cc2Amount2 = Number(finalcc2Array[indexNumber2]);
-          const cc3Amount2 = Number(finalcc3Array[indexNumber2]);
+          const zimoAmount1 = finalzimoArray[indexNumber1];
+          const cc0Amount1 = finalcc0Array[indexNumber1];
+          const cc1Amount1 = finalcc1Array[indexNumber1];
+          const cc2Amount1 = finalcc2Array[indexNumber1];
+          const cc3Amount1 = finalcc3Array[indexNumber1];
+          const zimoAmount2 = finalzimoArray[indexNumber2];
+          const cc0Amount2 = finalcc0Array[indexNumber2];
+          const cc1Amount2 = finalcc1Array[indexNumber2];
+          const cc2Amount2 = finalcc2Array[indexNumber2];
+          const cc3Amount2 = finalcc3Array[indexNumber2];
           console.log(
             zimoAmount1,
             cc0Amount1,
@@ -1299,17 +1299,17 @@
           );
 
           if (cczmtype === "(包)自摸") {
-            $(winner1ID).text(Number(zimoAmount1 * 3));
-            $(winner2ID).text(Number(zimoAmount2 * 3));
+            $(winner1ID).text(Number((zimoAmount1 * 3).toFixed(2)));
+            $(winner2ID).text(Number((zimoAmount2 * 3).toFixed(2)));
             $(ccplayerSpecialID).text(
-              Number(-zimoAmount1 * 3) + Number(-zimoAmount2 * 3)
+              Number((-zimoAmount1 * 3 + -zimoAmount2 * 3).toFixed(2))
             );
             $(nccplayerID).text(0);
           } else if (cczmtype === "(包)出冲") {
-            $(winner1ID).text(Number(cc1Amount1));
-            $(winner2ID).text(Number(cc1Amount2));
+            $(winner1ID).text(Number(cc1Amount1.toFixed(2)));
+            $(winner2ID).text(Number(cc1Amount2.toFixed(2)));
             $(ccplayerSpecialID).text(
-              Number(-cc1Amount1) + Number(-cc1Amount2)
+              Number((-cc1Amount1 + -cc1Amount2).toFixed(2))
             );
             $(nccplayerID).text(0);
           }
@@ -1319,7 +1319,9 @@
           const remarkTD = $("<td></td>");
           const winner1Total = Number($(winner1ID).text());
           const winner2Total = Number($(winner2ID).text());
-          const ccplayerTotal = Number(winner1Total) + Number(winner2Total);
+          const ccplayerTotal = Number(
+            (winner1Total + winner2Total).toFixed(2)
+          );
 
           const multipleWinner =
             "局數: " +
@@ -1368,7 +1370,7 @@
           const fanshu3 = document.getElementById("fanshu3List").value;
 
           $(fanshuID).text("三響");
-          $(winnerID).text("x3");
+          $(winnerID).text("備注");
           $(eattypeID).text(cczmtype);
           $(ccplayerID).text(ccplayerSpecial);
 
@@ -1452,21 +1454,21 @@
           }
           console.log(indexNumber1, indexNumber2, indexNumber3);
 
-          const zimoAmount1 = Number(finalzimoArray[indexNumber1]);
-          const cc0Amount1 = Number(finalcc0Array[indexNumber1]);
-          const cc1Amount1 = Number(finalcc1Array[indexNumber1]);
-          const cc2Amount1 = Number(finalcc2Array[indexNumber1]);
-          const cc3Amount1 = Number(finalcc3Array[indexNumber1]);
-          const zimoAmount2 = Number(finalzimoArray[indexNumber2]);
-          const cc0Amount2 = Number(finalcc0Array[indexNumber2]);
-          const cc1Amount2 = Number(finalcc1Array[indexNumber2]);
-          const cc2Amount2 = Number(finalcc2Array[indexNumber2]);
-          const cc3Amount2 = Number(finalcc3Array[indexNumber2]);
-          const zimoAmount3 = Number(finalzimoArray[indexNumber3]);
-          const cc0Amount3 = Number(finalcc0Array[indexNumber3]);
-          const cc1Amount3 = Number(finalcc1Array[indexNumber3]);
-          const cc2Amount3 = Number(finalcc2Array[indexNumber3]);
-          const cc3Amount3 = Number(finalcc3Array[indexNumber3]);
+          const zimoAmount1 = finalzimoArray[indexNumber1];
+          const cc0Amount1 = finalcc0Array[indexNumber1];
+          const cc1Amount1 = finalcc1Array[indexNumber1];
+          const cc2Amount1 = finalcc2Array[indexNumber1];
+          const cc3Amount1 = finalcc3Array[indexNumber1];
+          const zimoAmount2 = finalzimoArray[indexNumber2];
+          const cc0Amount2 = finalcc0Array[indexNumber2];
+          const cc1Amount2 = finalcc1Array[indexNumber2];
+          const cc2Amount2 = finalcc2Array[indexNumber2];
+          const cc3Amount2 = finalcc3Array[indexNumber2];
+          const zimoAmount3 = finalzimoArray[indexNumber3];
+          const cc0Amount3 = finalcc0Array[indexNumber3];
+          const cc1Amount3 = finalcc1Array[indexNumber3];
+          const cc2Amount3 = finalcc2Array[indexNumber3];
+          const cc3Amount3 = finalcc3Array[indexNumber3];
           console.log(
             zimoAmount1,
             cc0Amount1,
@@ -1486,20 +1488,24 @@
           );
 
           if (cczmtype === "(包)自摸") {
-            $(winner1ID).text(Number(zimoAmount1 * 3));
-            $(winner2ID).text(Number(zimoAmount2 * 3));
-            $(winner3ID).text(Number(zimoAmount3 * 3));
+            $(winner1ID).text(Number((zimoAmount1 * 3).toFixed(2)));
+            $(winner2ID).text(Number((zimoAmount2 * 3).toFixed(2)));
+            $(winner3ID).text(Number((zimoAmount3 * 3).toFixed(2)));
             $(ccplayerSpecialID).text(
-              Number(-zimoAmount1 * 3) +
-                Number(-zimoAmount2 * 3) +
-                Number(-zimoAmount3 * 3)
+              Number(
+                (
+                  -zimoAmount1 * 3 +
+                  -zimoAmount2 * 3 +
+                  -zimoAmount3 * 3
+                ).toFixed(2)
+              )
             );
           } else if (cczmtype === "(包)出冲") {
-            $(winner1ID).text(Number(cc1Amount1));
-            $(winner2ID).text(Number(cc1Amount2));
-            $(winner3ID).text(Number(cc1Amount3));
+            $(winner1ID).text(Number(cc1Amount1.toFixed(2)));
+            $(winner2ID).text(Number(cc1Amount2.toFixed(2)));
+            $(winner3ID).text(Number(cc1Amount3.toFixed(2)));
             $(ccplayerSpecialID).text(
-              Number(-cc1Amount1) + Number(-cc1Amount2) + Number(-cc1Amount3)
+              Number((-cc1Amount1 + -cc1Amount2 + -cc1Amount3).toFixed(2))
             );
           }
 
@@ -1509,8 +1515,9 @@
           const winner1Total = Number($(winner1ID).text());
           const winner2Total = Number($(winner2ID).text());
           const winner3Total = Number($(winner3ID).text());
-          const ccplayerTotal =
-            Number(winner1Total) + Number(winner2Total) + Number(winner3Total);
+          const ccplayerTotal = Number(
+            (winner1Total + winner2Total + winner3Total).toFixed(2)
+          );
 
           const multipleWinner =
             "局數: " +
@@ -1597,7 +1604,7 @@
           if (cczmtype === "(包)自摸") {
             $(ccplayerID).text(bzmplayer);
           } else if (cczmtype === "自摸") {
-            $(ccplayerID).text("NA");
+            $(ccplayerID).text("---");
           } else {
             $(ccplayerID).text(ccplayer);
           }
@@ -1610,11 +1617,11 @@
           }
           console.log(indexNumber);
 
-          const zimoAmount = Number(finalzimoArray[indexNumber]);
-          const cc0Amount = Number(finalcc0Array[indexNumber]);
-          const cc1Amount = Number(finalcc1Array[indexNumber]);
-          const cc2Amount = Number(finalcc2Array[indexNumber]);
-          const cc3Amount = Number(finalcc3Array[indexNumber]);
+          const zimoAmount = finalzimoArray[indexNumber];
+          const cc0Amount = finalcc0Array[indexNumber];
+          const cc1Amount = finalcc1Array[indexNumber];
+          const cc2Amount = finalcc2Array[indexNumber];
+          const cc3Amount = finalcc3Array[indexNumber];
           console.log(
             indexNumber,
             zimoAmount,
@@ -1699,38 +1706,38 @@
           );
 
           if (cczmtype === "自摸") {
-            $(winnerCellID).text(Number(zimoAmount * 3));
-            $(nccplayer1ID).text(Number(-zimoAmount));
-            $(nccplayer2ID).text(Number(-zimoAmount));
-            $(nccplayer3ID).text(Number(-zimoAmount));
+            $(winnerCellID).text(Number((zimoAmount * 3).toFixed(2)));
+            $(nccplayer1ID).text(Number((-zimoAmount).toFixed(2)));
+            $(nccplayer2ID).text(Number((-zimoAmount).toFixed(2)));
+            $(nccplayer3ID).text(Number((-zimoAmount).toFixed(2)));
           } else if (cczmtype === "打出" && fullNotfull === "全銃") {
             $(winnerCellID).text(
-              Number(cc1Amount) + Number(cc0Amount) + Number(cc0Amount)
+              Number((cc1Amount + cc0Amount + cc0Amount).toFixed(2))
             );
-            $(ccplayerCellID).text(Number(-cc1Amount));
-            $(nccplayer1ID).text(Number(-cc0Amount));
-            $(nccplayer2ID).text(Number(-cc0Amount));
+            $(ccplayerCellID).text(Number((-cc1Amount).toFixed(2)));
+            $(nccplayer1ID).text(Number((-cc0Amount).toFixed(2)));
+            $(nccplayer2ID).text(Number((-cc0Amount).toFixed(2)));
           } else if (cczmtype === "打出" && fullNotfull === "半銃") {
             $(winnerCellID).text(
-              Number(cc2Amount) + Number(cc3Amount) + Number(cc3Amount)
+              Number((cc2Amount + cc3Amount + cc3Amount).toFixed(2))
             );
-            $(ccplayerCellID).text(Number(-cc2Amount));
-            $(nccplayer1ID).text(Number(-cc3Amount));
-            $(nccplayer2ID).text(Number(-cc3Amount));
+            $(ccplayerCellID).text(Number(-cc2Amount.toFixed(2)));
+            $(nccplayer1ID).text(Number(-cc3Amount.toFixed(2)));
+            $(nccplayer2ID).text(Number(-cc3Amount.toFixed(2)));
           } else if (cczmtype === "(包)出冲") {
             $(winnerCellID).text(
-              Number(cc1Amount) + Number(cc0Amount) + Number(cc0Amount)
+              Number((cc1Amount + cc0Amount + cc0Amount).toFixed(2))
             );
-            $(ccplayerCellID).text(Number(-cc1Amount));
-            $(nccplayer1ID).text(Number(-cc0Amount));
-            $(nccplayer2ID).text(Number(-cc0Amount));
+            $(ccplayerCellID).text(Number(-cc1Amount.toFixed(2)));
+            $(nccplayer1ID).text(Number(-cc0Amount.toFixed(2)));
+            $(nccplayer2ID).text(Number(-cc0Amount.toFixed(2)));
           } else if (cczmtype === "(包)自摸") {
             $(winnerCellID).text(
-              Number(zimoAmount * 3) + Number(cc0Amount) + Number(cc0Amount)
+              Number((zimoAmount * 3 + cc0Amount + cc0Amount).toFixed(2))
             );
-            $(bzmplayerID).text(Number(-zimoAmount * 3));
-            $(nccplayer1ID).text(Number(-cc0Amount));
-            $(nccplayer2ID).text(Number(-cc0Amount));
+            $(bzmplayerID).text(Number((-zimoAmount * 3).toFixed(2)));
+            $(nccplayer1ID).text(Number(-cc0Amount.toFixed(2)));
+            $(nccplayer2ID).text(Number(-cc0Amount.toFixed(2)));
           }
         }
 
@@ -2014,6 +2021,14 @@
     </script>
 
     <script>
+      $("#p1amount, #p2amount, #p3amount, #p4amount").on("input", function () {
+        this.value = this.value
+          .replace(/(?!^)-/g, "") // only allow one -
+          .replace(/[^0-9.-]/g, ""); // remove invalid chars
+      });
+    </script>
+
+    <script>
       function seResult() {
         const inputIDarray = [
           "#p1amount",
@@ -2095,10 +2110,10 @@
           northID
         );
 
-        $(fanshuID).text("NA");
-        $(winnerID).text("NA");
-        $(eattypeID).text("特別輸入");
-        $(ccplayerID).text("NA");
+        $(fanshuID).text("特別輸入");
+        $(winnerID).text("---");
+        $(eattypeID).text("---");
+        $(ccplayerID).text("---");
         $(eastID).text(parseFloat($("#p1amount").val()));
         $(southID).text(parseFloat($("#p2amount").val()));
         $(westID).text(parseFloat($("#p3amount").val()));
